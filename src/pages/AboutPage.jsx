@@ -29,8 +29,6 @@ export const About = () => {
             Approach
           </p>
         </section>
-        <h1 className="text-3xl text-red-600">Trusted by Leaders</h1>
-
         <div className="flex flex-row gap-4 mt-5">
           <a href="/contact">
             <Button
@@ -54,7 +52,7 @@ export const About = () => {
         <img
           src="/images/about.png"
           alt="coding buddies "
-          className="rounded-lg"
+          className="rounded-lg mt-5"
         />
       </div>
     </div>

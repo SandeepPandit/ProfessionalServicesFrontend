@@ -77,7 +77,7 @@ export const Contact = () => {
               htmlFor="username"
               className="bg-purple-600 border-2 rounded-lg p-2 text-white w-44"
             >
-              username
+              Username
             </label>
             <input
               type="text"
@@ -97,7 +97,7 @@ export const Contact = () => {
               htmlFor="email"
               className="bg-purple-600 border-2 rounded-lg p-2 text-white w-44"
             >
-              email
+              E-mail
             </label>
             <input
               type="email"
@@ -117,7 +117,7 @@ export const Contact = () => {
               htmlFor="message"
               className="bg-purple-600 border-2 rounded-lg p-2 text-white w-44 h-11"
             >
-              message
+              Message
             </label>
             <textarea
               name="message"
@@ -147,16 +147,6 @@ export const Contact = () => {
           </div>
         </form>
       </div>
-      {/* <section className="mb-3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5489571014573!2d81.60245417523609!3d21.249727180152497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1716574849078!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </section> */}
     </div>
   );
 };

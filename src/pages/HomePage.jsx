@@ -16,9 +16,11 @@ export const Home = () => {
             World-Class Coaching
           </h1>
           <p className="text-xl font-sans mt-7">
-            Are you ready to elevate your business to new heights? <br /> Our
-            world-class coaching program is designed to empower you with the
-            skills, knowledge, and strategies you need to succeed in
+            <span className="text-2xl font-bold text-purple-600">
+              Are you ready to elevate your business to new heights?
+            </span>
+            <br /> Our world-class coaching program is designed to empower you
+            with the skills, knowledge, and strategies you need to succeed in
             today&apos;s competitive market. Whether you&apos;re a seasoned
             entrepreneur or just starting out, our expert coaches will provide
             personalized guidance tailored to your unique goals and challenges.
