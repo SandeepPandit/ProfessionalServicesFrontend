@@ -4,7 +4,8 @@ import { useAuth } from "@/Authorization/useAuth";
 import { toast } from "react-toastify";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
-
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 export const Register = () => {
   const [user, setUser] = useState({
     username: "",
@@ -62,7 +63,17 @@ export const Register = () => {
     <>
       <div className="flex sm:flex-row justify-between flex-col-reverse gap-10">
         <div className="sm:size-1/2 size-full">
-          <img src="/images/register.png" />
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div
+                className={
+                  isVisible ? "animate__animated animate__jackInTheBox" : ""
+                }
+              >
+                <img src="/images/register.png" />
+              </div>
+            )}
+          </TrackVisibility>
         </div>
 
         <div className="sm:size-1/2 bg-gray-200 flex p-10 flex-col rounded-lg size-full">

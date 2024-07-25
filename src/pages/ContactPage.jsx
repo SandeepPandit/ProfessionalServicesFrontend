@@ -3,7 +3,8 @@ import { useAuth } from "@/Authorization/useAuth";
 import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/LoadingButton";
 import { toast } from "react-toastify";
-
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 const defaultContactFormData = {
   username: "",
   email: "",
@@ -64,7 +65,20 @@ export const Contact = () => {
   return (
     <div className="flex sm:flex-row flex-col-reverse gap-10">
       <div className="sm:w-2/5 w-full">
-        <img src="/images/support.png" alt="we are always ready to help" />
+        <TrackVisibility>
+          {({ isVisible }) => (
+            <div
+              className={
+                isVisible ? "animate__animated animate__jackInTheBox" : ""
+              }
+            >
+              <img
+                src="/images/support.png"
+                alt="we are always ready to help"
+              />
+            </div>
+          )}
+        </TrackVisibility>
       </div>
 
       <div className="sm:w-3/5 bg-gray-200 flex p-10 flex-col rounded-lg w-full">

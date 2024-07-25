@@ -4,6 +4,8 @@ import { useAuth } from "@/Authorization/useAuth";
 import { toast } from "react-toastify";
 import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/LoadingButton";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -63,12 +65,22 @@ export const Login = () => {
     <>
       <div className="flex sm:flex-row flex-col-reverse gap-10">
         <div className="sm:w-1/2 w-full">
-          <img
-            src="/images/login.png"
-            alt=" let's fill the login form "
-            width="500"
-            height="500"
-          />
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div
+                className={
+                  isVisible ? "animate__animated animate__jackInTheBox" : ""
+                }
+              >
+                <img
+                  src="/images/login.png"
+                  alt=" let's fill the login form "
+                  width="500"
+                  height="500"
+                />
+              </div>
+            )}
+          </TrackVisibility>
         </div>
 
         <div className="sm:w-1/2 bg-gray-200 flex p-10 flex-col rounded-lg w-full">

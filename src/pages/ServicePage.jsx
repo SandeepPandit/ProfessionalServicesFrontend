@@ -7,6 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Service = () => {
   const { services } = useAuth();
@@ -30,11 +32,21 @@ export const Service = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <img
-                  src={image}
-                  alt="our services info"
-                  className="w-full aspect-video"
-                />
+                <TrackVisibility>
+                  {({ isVisible }) => (
+                    <div
+                      className={
+                        isVisible ? "animate__animated animate__rubberBand" : ""
+                      }
+                    >
+                      <img
+                        src={image}
+                        alt="our services info"
+                        className="w-full aspect-video"
+                      />
+                    </div>
+                  )}
+                </TrackVisibility>
               </CardContent>
               <CardDescription className="text-xl text-white p-4">
                 {description}

@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Home = () => {
   return (
@@ -34,21 +36,41 @@ export const Home = () => {
         </div>
 
         <div className="sm:w-1/3 p-2 w-full">
-          <img
-            src="/images/Home1.png"
-            alt="coding together"
-            className="rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-2xl hover: shadow-purple-700 border-spacing-5 border-purple-700"
-          />
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div
+                className={
+                  isVisible ? "animate__animated animate__jackInTheBox" : ""
+                }
+              >
+                <img
+                  src="/images/Home1.png"
+                  alt="coding together"
+                  className="rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-2xl hover: shadow-purple-700 border-spacing-5 border-purple-700"
+                />
+              </div>
+            )}
+          </TrackVisibility>
         </div>
       </div>
 
       <div className="flex sm:flex-row mt-20 flex-col-reverse">
         <div className="sm:w-2/5 p-2 w-full mt-10">
-          <img
-            src="/images/Home2.png"
-            alt="coding together"
-            className="rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-2xl hover: shadow-purple-700 border-spacing-5 border-purple-700"
-          />
+          <TrackVisibility>
+            {({ isVisible }) => (
+              <div
+                className={
+                  isVisible ? "animate__animated animate__jackInTheBox" : ""
+                }
+              >
+                <img
+                  src="/images/Home2.png"
+                  alt="coding together"
+                  className="rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-2xl hover: shadow-purple-700 border-spacing-5 border-purple-700"
+                />
+              </div>
+            )}
+          </TrackVisibility>
         </div>
 
         <div className="sm:w-3/5 sm:p-10 w-full ">

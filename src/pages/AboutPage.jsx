@@ -1,6 +1,7 @@
 import { useAuth } from "@/Authorization/useAuth";
 import { Button } from "@/components/ui/button";
-
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 export const About = () => {
   const { user } = useAuth();
   return (
@@ -49,11 +50,21 @@ export const About = () => {
         </div>
       </div>
       <div className="sm:w-2/5 w-full">
-        <img
-          src="/images/about.png"
-          alt="coding buddies "
-          className="rounded-lg mt-5"
-        />
+        <TrackVisibility>
+          {({ isVisible }) => (
+            <div
+              className={
+                isVisible ? "animate__animated animate__jackInTheBox" : ""
+              }
+            >
+              <img
+                src="/images/about.png"
+                alt="coding buddies "
+                className="rounded-lg mt-5"
+              />
+            </div>
+          )}
+        </TrackVisibility>
       </div>
     </div>
   );
