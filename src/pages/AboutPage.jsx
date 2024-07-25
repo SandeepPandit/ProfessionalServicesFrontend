@@ -8,8 +8,8 @@ export const About = () => {
       <div className="sm:w-3/5 text-xl flex flex-col gap-5 w-full">
         <section>
           <h1>
-            Welcome,
-            {user ? ` ${user.username} to our website` : ` to our website`}
+            Welcome
+            {user ? ` ${user.username}, to our website` : ` to our website`}
           </h1>
           <h1 className="text-3xl text-red-600">We Are Here to Help! </h1>
           <p>
@@ -37,7 +37,7 @@ export const About = () => {
               type="submit"
               className="bg-green-600 rounded-xl text-xl  p-6"
             >
-              connect now
+              Connect now
             </Button>
           </a>
           <a href="/service">
@@ -45,7 +45,7 @@ export const About = () => {
               type="submit"
               className="bg-green-600 rounded-xl text-xl  p-6"
             >
-              learn more
+              Learn more
             </Button>
           </a>
         </div>
@@ -54,8 +54,7 @@ export const About = () => {
         <img
           src="/images/about.png"
           alt="coding buddies "
-          width="400"
-          height="500"
+          className="rounded-lg"
         />
       </div>
     </div>
