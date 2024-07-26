@@ -80,7 +80,7 @@ export const Register = () => {
           <h1 className="text-6xl font-bold"> Register</h1>
           <br />
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:p-10">
             <div className="flex flex-row gap-4">
               <label
                 htmlFor="username"
