@@ -77,7 +77,7 @@ export const Register = () => {
         </div>
 
         <div className="sm:size-1/2 bg-gray-200 flex p-10 flex-col rounded-lg size-full">
-          <h1 className="text-6xl font-bold"> Registration Form</h1>
+          <h1 className="text-6xl font-bold"> Register</h1>
           <br />
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -91,7 +91,7 @@ export const Register = () => {
               <input
                 type="text"
                 name="username"
-                placeholder="Your username...."
+                placeholder="Your username..."
                 id="username"
                 required
                 autoComplete="off"
